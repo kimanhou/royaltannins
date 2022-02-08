@@ -4,7 +4,7 @@ import './Footer.scss';
 const Footer : React.FC = props => {
     return (
         <footer className={`flex-column`}>
-            &copy; 2021
+            &copy; 2022
         </footer>
     );
 }
