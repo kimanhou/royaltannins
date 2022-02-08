@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "./static/css/main.397e1dfd.chunk.css",
-    "main.js": "./static/js/main.9e6aeae1.chunk.js",
-    "main.js.map": "./static/js/main.9e6aeae1.chunk.js.map",
+    "main.css": "./static/css/main.6e3d5a47.chunk.css",
+    "main.js": "./static/js/main.4251ea0c.chunk.js",
+    "main.js.map": "./static/js/main.4251ea0c.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.700bd3ed.js",
     "runtime-main.js.map": "./static/js/runtime-main.700bd3ed.js.map",
     "static/js/2.06bd7be9.chunk.js": "./static/js/2.06bd7be9.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.1aab93ee.chunk.js": "./static/js/3.1aab93ee.chunk.js",
     "static/js/3.1aab93ee.chunk.js.map": "./static/js/3.1aab93ee.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.397e1dfd.chunk.css.map": "./static/css/main.397e1dfd.chunk.css.map",
+    "static/css/main.6e3d5a47.chunk.css.map": "./static/css/main.6e3d5a47.chunk.css.map",
     "static/js/2.06bd7be9.chunk.js.LICENSE.txt": "./static/js/2.06bd7be9.chunk.js.LICENSE.txt",
     "static/media/App.scss": "./static/media/Rubik-LightItalic.987cbfce.ttf",
     "static/media/cropped-rt-logo-2.aacbb41a.jpeg": "./static/media/cropped-rt-logo-2.aacbb41a.jpeg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.700bd3ed.js",
     "static/js/2.06bd7be9.chunk.js",
-    "static/css/main.397e1dfd.chunk.css",
-    "static/js/main.9e6aeae1.chunk.js"
+    "static/css/main.6e3d5a47.chunk.css",
+    "static/js/main.4251ea0c.chunk.js"
   ]
 }
