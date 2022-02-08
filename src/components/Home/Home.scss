@@ -1,10 +1,27 @@
 .home {
-    >.cup-image {
-        max-width: 90%;
-        width: 223px;
+    >.home-content {
+        >.cup-image {
+            max-width: 90%;
+            width: 223px;
+            align-self: center;
+        }
+        >.right {
+            text-align: left;
+        }
     }
     >.social {
         justify-content: center;
-        margin-top: 60px;
+        margin: 60px auto 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home {
+        >.home-content {
+            flex-direction: column;
+            >.right {
+                text-align: center;
+            }
+        }
     }
 }

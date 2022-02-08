@@ -12,11 +12,11 @@
         position: absolute;
         left: 0;
         bottom: 0;
+        right: 0;
+        top: 0;
         overflow: hidden;
         transition: width .6s;
         white-space: nowrap;
-        right: 0;
-        top: 0;
         .path {
             stroke-dasharray: 536;
             stroke-dashoffset: 536;
