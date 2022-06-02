@@ -16,10 +16,10 @@ interface IRegisterPopUpProps {
 
 const RegisterPopUp : React.FC<IRegisterPopUpProps> = props => {
     const isVisibleClassName = props.isVisible ? 'visible' : '';
-    const [ participants, setParticipants ] = useState(2);
-    const [ name, setName ] = useState('Poney');
-    const [ firstName, setFirstName ] = useState('Puppy');
-    const [ email, setEmail ] = useState('mark.kimanh@gmail.com');
+    const [ participants, setParticipants ] = useState(1);
+    const [ name, setName ] = useState('');
+    const [ firstName, setFirstName ] = useState('');
+    const [ email, setEmail ] = useState('');
 
     const decreaseParticipants = () => {
         if (participants > 0) {
@@ -74,10 +74,10 @@ const RegisterPopUp : React.FC<IRegisterPopUpProps> = props => {
       };
 
     const resetFields = () => {
-        setName('Poney ');
-        setFirstName('Puppy');
-        setEmail('mark.kimanh@gmail.com');
-        setParticipants(2);
+        setName(' ');
+        setFirstName('');
+        setEmail('');
+        setParticipants(1);
     }
 
     const sendRegisterRequest = () => {
