@@ -10,7 +10,7 @@ const ContactDetails : React.FC<IContactDetailsProps> = props => {
     return (
         <div className={`contact-details item left`}>
             <div className={`details-text`}>
-                <a href={props.url} target='_blank'>
+                <a href={props.url} target='_blank' rel="noreferrer">
                     {props.children}
                 </a>
             </div>

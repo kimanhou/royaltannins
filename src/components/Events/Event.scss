@@ -1,0 +1,38 @@
+.event {
+    margin-bottom: 100px;
+    >.left {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 50%;
+    }
+    >.right {
+        width: 50%;
+        padding: 0 20px;
+        >.event-header {
+            margin-bottom: 40px;
+            >.event-title {
+                text-transform: uppercase;
+                letter-spacing: .4em;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            >.event-spots {
+                font-size: .8rem;
+            }
+        }
+        >.event-description {
+            text-align: left;
+        }
+        >.event-date-line {
+            height: 80px;
+            width: 1px;
+            margin: 20px 20px 10px;
+            background-color: var(--fg);
+        }
+        >.event-date-button {
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

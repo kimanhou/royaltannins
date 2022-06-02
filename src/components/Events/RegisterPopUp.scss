@@ -1,0 +1,71 @@
+.register-pop-up {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, .4);
+    &.visible {
+        display: flex;
+    }
+    >.register-pop-up-content {
+        border: 2px solid var(--fg);
+        max-width: 800px;
+        background-color: var(--bg);
+        padding: 40px;
+        >.event-title {
+            text-transform: uppercase;
+            letter-spacing: .4em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        >table {
+            td {
+                padding-bottom: .6rem;
+                &.align-right {
+                    text-align: right;
+                }
+                &.td-gutter {
+                    width: 10px;
+                }
+                >input {
+                    border: none;
+                    border-bottom: solid 1px var(--fg);
+                    font-size: 1.1rem;
+                    width: 300px;
+                    &:focus, &:focus-visible {
+                        border-bottom: solid 2px var(--fg);
+                        outline: none;
+                    }
+                }
+            }
+        }
+        >.flex-row {
+            justify-content: center;
+            align-items: center;
+            >* {
+                margin: 10px;
+            }
+            &.register-participants {
+                .participants-number {
+                    >* {
+                        margin: 0 4px;
+                    }
+                }
+            }
+        }
+        >.register-pop-up-confirmation {
+            margin-top: 20px;
+            >button {
+                border-radius: 5px;
+                padding: 10px 20px;
+                background-color: var(--fg);
+                color: var(--bg);
+            }
+        }
+    }
+}

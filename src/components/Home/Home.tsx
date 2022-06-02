@@ -9,7 +9,7 @@ const Home : React.FC = props => {
     return (
         <div className={`home`}>
             <div className='home-content flex-row'>
-                <img src={cup} className={`cup-image`} alt={'cup image'} />
+                <img src={cup} className={`cup-image`} alt={'cup'} />
                 <div className='right'>
                     <h1 className={`flex-row`}>
                         Le vin. Les copains.

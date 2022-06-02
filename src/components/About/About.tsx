@@ -6,7 +6,7 @@ const About : React.FC = props => {
     return (
         <div className={`about`}>
             <h1 className={`flex-row`}>
-                <img src={cup} alt={`cup image`} />
+                <img src={cup} alt={`cup`} />
                 À propos des RT
             </h1>
 

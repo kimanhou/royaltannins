@@ -36,4 +36,13 @@
     .spacer {
         height: 2rem;
     }
+
+    button {
+        color: var(--fg);
+        background: none;
+        font-family: Rubik;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
 }

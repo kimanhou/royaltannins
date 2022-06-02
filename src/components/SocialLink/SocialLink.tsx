@@ -9,7 +9,7 @@ interface ISocialLinkProps {
 const SocialLink : React.FC<ISocialLinkProps> = props => {
     return (
         <div className={`social-link`}>
-            <a href={props.url} target='_blank'>
+            <a href={props.url} target='_blank' rel="noreferrer">
                 <img src={props.icon} alt='icon'/>
             </a>
         </div>
