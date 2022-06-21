@@ -1,0 +1,17 @@
+.event-content {
+    >.event-header {
+        margin-bottom: 40px;
+        >.event-title {
+            text-transform: uppercase;
+            letter-spacing: .4em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        >.event-spots {
+            font-size: .8rem;
+        }
+    }
+    >.event-description {
+        text-align: left;
+    }
+}

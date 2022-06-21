@@ -9,6 +9,8 @@ import Contact from './components/Contact/Contact';
 import Shop from './components/Shop/Shop';
 import Header from './components/Header/Header';
 import About from './components/About/About';
+import EventManagement from './components/EventManagement/EventManagement';
+import LogIn from './components/LogIn/LogIn';
 
 const App : React.FC = props => {
 
@@ -30,12 +32,18 @@ const App : React.FC = props => {
                 <Route path={"/about"} element={<About />} >
                 </Route>
 
+                <Route path={"/event-management"} element={<EventManagement />} >
+                </Route>
+
+                <Route path={"/log-in"} element={<LogIn />} >
+                </Route>
+
                 <Route path={"/"} element={<Home />} >
                 </Route>
             </Routes>
+            <Footer />
         </HashRouter>
 
-        <Footer />
     </div>
     );
 }

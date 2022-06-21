@@ -4,4 +4,10 @@ footer {
     font-size: .8rem;
     justify-content: center;
     align-items: center;
+    >.flex-row {
+        >.wine-glass {
+            margin: 0 10px;
+            cursor: default;
+        }
+    }
 }

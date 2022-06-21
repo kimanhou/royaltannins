@@ -11,7 +11,7 @@ const Participant : React.FC<IParticipantProps> = props => {
             <td>{props.participant.name}</td>
             <td>{props.participant.firstName}</td>
             <td>{props.participant.email}</td>
-            <td>{props.participant.numberOfPeople}</td>
+            <td className='center'>{props.participant.numberOfPeople}</td>
         </tr>
     );
 }

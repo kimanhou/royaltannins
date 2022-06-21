@@ -133,7 +133,7 @@ const RegisterPopUp : React.FC<IRegisterPopUpProps> = props => {
                     </tbody>
                 </table>
                 <div className='register-participants flex-row'>
-                    <p>Nombre de participants</p>
+                    <p>Nombre de personnes</p>
                     <div className='participants-number'>
                         <button onClick={decreaseParticipants}>-</button>
                         <span>{participants}</span>

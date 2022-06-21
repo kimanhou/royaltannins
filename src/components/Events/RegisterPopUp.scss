@@ -69,3 +69,25 @@
         }
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    .register-pop-up {
+        >.register-pop-up-content { 
+            max-width: 80%;
+            padding: 20px;
+            >table {
+                td {
+                    >input {
+                        width: unset;
+                    }
+                }
+            }
+            >.flex-row {
+                >* {
+                    margin: 3px;
+                }
+            }
+        }
+    }
+}

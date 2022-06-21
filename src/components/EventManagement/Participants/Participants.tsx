@@ -8,21 +8,24 @@ interface IParticipantsProps {
 }
 
 const Participants : React.FC<IParticipantsProps> = props => {
+    const hasParticipants = props.participants.length > 0 ? true : false;
+
     return (
         <div className={`participants`}>
-            <table>
+           {hasParticipants &&  <table>
                 <thead>
                     <tr>
                         <th>Nom</th>
                         <th>Prénom</th>
                         <th>Email</th>
-                        <th>Nombre de participants</th>
+                        <th className='center'>Personnes</th>
                     </tr>
                 </thead>
                 <tbody>
                     {props.participants.map(t => <Participant participant={t} />)}
                 </tbody>
-            </table>
+            </table>}
+            {!hasParticipants && <span className='no-participants'><i>Pas d'inscrit à cet évènement</i></span>}
         </div>
     );
 }

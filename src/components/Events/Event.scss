@@ -9,30 +9,32 @@
     >.right {
         width: 50%;
         padding: 0 20px;
-        >.event-header {
-            margin-bottom: 40px;
-            >.event-title {
-                text-transform: uppercase;
-                letter-spacing: .4em;
-                font-weight: bold;
-                margin-bottom: 10px;
-            }
-            >.event-spots {
-                font-size: .8rem;
-            }
-        }
-        >.event-description {
-            text-align: left;
-        }
         >.event-date-line {
             height: 80px;
             width: 1px;
             margin: 20px 20px 10px;
             background-color: var(--fg);
         }
-        >.event-date-button {
-            justify-content: space-between;
-            align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .event {
+        &.flex-row {
+            flex-direction: column;
+        }
+        >.left {
+            width: 100%;
+            height: 60vh;
+            margin-bottom: 30px;
+        }
+        >.right {
+            width: 100%;
+            padding: 0;
+            >.event-date-line {
+                height: 80px;
+                margin: 20px 20px 10px;
+            }
         }
     }
 }

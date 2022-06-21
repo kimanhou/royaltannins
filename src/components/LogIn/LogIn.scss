@@ -1,0 +1,33 @@
+.log-in {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    >.log-in-input {
+        font-size: 1.5rem;
+        background-color: transparent;
+        margin-top: 300px;
+        margin-left: 55%;
+        border: none;
+        border-bottom: solid 1px var(--fg);
+        width: 200px;
+        &:focus, &:focus-visible {
+            border-bottom: solid 2px var(--fg);
+            outline: none;
+        }
+    }
+    >.log-in-button-show {
+        text-transform: uppercase;
+        font-size: .8rem;
+        width: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .log-in {
+        >.log-in-input {
+            margin: 100px auto 0;
+        }
+    }
+}

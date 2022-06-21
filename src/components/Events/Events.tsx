@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import EventModel from '../../model/EventModel';
 import Event from './Event';
-import './Events.scss';
 import { getEvents } from './EventsController';
 import RegisterPopUp from './RegisterPopUp';
 

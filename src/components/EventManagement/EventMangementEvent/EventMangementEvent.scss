@@ -1,0 +1,12 @@
+.event-management-event {
+    margin-bottom: 100px;
+    >.event-date {
+        margin: 20px auto 50px;
+    }
+    >.event-management-event-bottom-line {
+        height: 1px;
+        width: 80%;
+        background-color: var(--fg);
+        margin: 50px auto;
+    }
+}
