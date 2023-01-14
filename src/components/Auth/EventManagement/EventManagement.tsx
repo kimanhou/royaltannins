@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import EventModel from '../../model/EventModel';
-import { getEvents } from '../Events/EventsController';
+import EventModel from '../../../model/EventModel';
+import { getEvents } from '../../Events/EventsController';
 import './EventManagement.scss';
-import EventMangementEvent from './EventMangementEvent/EventMangementEvent';
+import EventMangementEvent from '../EventMangementEvent/EventMangementEvent';
 
 interface IEventManagementProps {
 
@@ -14,7 +14,10 @@ const EventManagement : React.FC<IEventManagementProps> = props => {
         getEvents().then(t => setEvents(t));
     }, []);
     
+    const token = localStorage.getItem("auth");
+
     return (
+        token ?
         <div className={`event-management`}>
             <h2>Hello Ben !</h2>
 
@@ -28,6 +31,7 @@ const EventManagement : React.FC<IEventManagementProps> = props => {
             }
 
         </div>
+        : <>Redirect</>
     );
 }
 

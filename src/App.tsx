@@ -9,7 +9,7 @@ import Contact from './components/Contact/Contact';
 import Shop from './components/Shop/Shop';
 import Header from './components/Header/Header';
 import About from './components/About/About';
-import EventManagement from './components/EventManagement/EventManagement';
+import EventManagement from './components/Auth/EventManagement/EventManagement';
 import LogIn from './components/LogIn/LogIn';
 
 const App : React.FC = props => {

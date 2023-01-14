@@ -13,6 +13,14 @@
             &.center {
                 text-align: center;
             }
+            &.right {
+                text-align: right;
+            }
+        }
+        tr {
+            &.spacer {
+                height: 5px;
+            }
         }
     }
     >.no-participants {

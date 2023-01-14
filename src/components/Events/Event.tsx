@@ -2,9 +2,7 @@ import React from 'react';
 import { useIsMobile } from '../../hooks/UseMediaQuery';
 import EventModel from '../../model/EventModel';
 import './Event.scss';
-import EventButton from './EventButton/EventButton';
 import EventContent from './EventContent/EventContent';
-import EventDate from './EventContent/EventDate';
 import EventDateAndButton from './EventDateAndButton/EventDateAndButton';
 import EventDateAndButtonMobile from './EventDateAndButton/EventDateAndButtonMobile';
 

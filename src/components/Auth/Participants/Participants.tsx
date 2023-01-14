@@ -9,6 +9,7 @@ interface IParticipantsProps {
 
 const Participants : React.FC<IParticipantsProps> = props => {
     const hasParticipants = props.participants.length > 0 ? true : false;
+    const total : number = props.participants.reduce((a, b) => a + b.numberOfPeople, 0);
 
     return (
         <div className={`participants`}>
@@ -23,6 +24,13 @@ const Participants : React.FC<IParticipantsProps> = props => {
                 </thead>
                 <tbody>
                     {props.participants.map(t => <Participant participant={t} />)}
+                    <tr className="spacer"></tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th className='right'><b>TOTAL</b></th>
+                        <th className='center'>{total}</th>
+                    </tr>
                 </tbody>
             </table>}
             {!hasParticipants && <span className='no-participants'><i>Pas d'inscrit à cet évènement</i></span>}
