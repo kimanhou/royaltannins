@@ -4,7 +4,8 @@ import background from './../../images/fatty-corgi-1QsQRkxnU6I-unsplash.jpg';
 import { useNavigate } from 'react-router';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
-import { Flip, toast, ToastContainer } from 'react-toastify';
+import { Bounce, Flip, toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface ILogInProps {
 
@@ -43,7 +44,7 @@ const LogIn : React.FC<ILogInProps> = props => {
         formState: { errors },
     } = useForm();
 
-    const login = (data : any) => {
+    const login = () => {
         let params = {
             email: 'corgi@yahoo.com',
             password: userInput,
@@ -52,19 +53,21 @@ const LogIn : React.FC<ILogInProps> = props => {
         axios
             .post("https://2epoooo4sg.execute-api.us-east-1.amazonaws.com/royalTannins-auth", params,
             {headers : {"Content-Type" : "application/json", "Access-Control-Allow-Origin": "*"}})
-            .then(function (response) {
-                console.log(response);
-                if (response.data.success === false) {
-                    // TODO
-                    console.log('Unauthorized');
-                } else {
-                    const path = "/event-management";
-                    navigate(path);
-                }
+            .then(() => {
+                const path = "/event-management";
+                navigate(path);
           })
-    
           .catch(function (error) {
-            console.log(error);
+            toast.error(error.message, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
           });
       };
 
@@ -86,7 +89,7 @@ const LogIn : React.FC<ILogInProps> = props => {
                 draggable={false}
                 pauseOnHover
                 limit={1}
-                transition={Flip}
+                transition={Bounce}
             />
         </form>
     );
