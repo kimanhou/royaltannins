@@ -5,7 +5,13 @@ export const getEvents = async () => {
 }
 
 const fetchEventsFromDynamoDb = () => {
-    return fetch('https://947o0izppc.execute-api.us-east-1.amazonaws.com', { method: 'GET' })
+    const authTokenNullable = sessionStorage.getItem('authToken');
+    console.log('authToken from session storage', authTokenNullable);
+    const authToken = authTokenNullable ? authTokenNullable : '';
+    return fetch(' https://5vfzzakli8.execute-api.us-east-1.amazonaws.com/default/royalTannins-dynamoDbHandler', 
+        { method: 'GET', 
+          headers: new Headers({'custom-token': authToken})
+        })
         .then(response => response.json())
         .then(data => {
             const items = data.Items;

@@ -4,7 +4,7 @@ import background from './../../images/fatty-corgi-1QsQRkxnU6I-unsplash.jpg';
 import { useNavigate } from 'react-router';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
-import { Bounce, Flip, toast, ToastContainer } from 'react-toastify';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 interface ILogInProps {
@@ -53,7 +53,8 @@ const LogIn : React.FC<ILogInProps> = props => {
         axios
             .post("https://2epoooo4sg.execute-api.us-east-1.amazonaws.com/royalTannins-auth", params,
             {headers : {"Content-Type" : "application/json", "Access-Control-Allow-Origin": "*"}})
-            .then(() => {
+            .then((response) => {
+                sessionStorage.setItem('authToken', response.data.token);
                 const path = "/event-management";
                 navigate(path);
           })
