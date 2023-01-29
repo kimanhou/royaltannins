@@ -6,7 +6,6 @@ export const getEvents = async () => {
 
 const fetchEventsFromDynamoDb = () => {
     const authTokenNullable = sessionStorage.getItem('authToken');
-    console.log('authToken from session storage', authTokenNullable);
     const authToken = authTokenNullable ? authTokenNullable : '';
     return fetch(' https://5vfzzakli8.execute-api.us-east-1.amazonaws.com/default/royalTannins-dynamoDbHandler', 
         { method: 'GET', 

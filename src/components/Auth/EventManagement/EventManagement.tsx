@@ -13,11 +13,8 @@ const EventManagement : React.FC<IEventManagementProps> = props => {
     useEffect(() => {
         getEvents().then(t => setEvents(t));
     }, []);
-    
-    const token = localStorage.getItem("auth");
 
     return (
-        token ?
         <div className={`event-management`}>
             <h2>Hello Ben !</h2>
 
@@ -31,7 +28,6 @@ const EventManagement : React.FC<IEventManagementProps> = props => {
             }
 
         </div>
-        : <>Redirect</>
     );
 }
 
