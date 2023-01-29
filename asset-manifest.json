@@ -1,25 +1,29 @@
 {
   "files": {
-    "main.css": "./static/css/main.e624c244.chunk.css",
-    "main.js": "./static/js/main.e4fd6282.chunk.js",
-    "main.js.map": "./static/js/main.e4fd6282.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.3fe7d5a5.js",
-    "runtime-main.js.map": "./static/js/runtime-main.3fe7d5a5.js.map",
-    "static/js/2.a78ccb05.chunk.js": "./static/js/2.a78ccb05.chunk.js",
-    "static/js/2.a78ccb05.chunk.js.map": "./static/js/2.a78ccb05.chunk.js.map",
-    "static/js/3.52158342.chunk.js": "./static/js/3.52158342.chunk.js",
-    "static/js/3.52158342.chunk.js.map": "./static/js/3.52158342.chunk.js.map",
+    "main.css": "./static/css/main.e1036f0f.chunk.css",
+    "main.js": "./static/js/main.38017094.chunk.js",
+    "main.js.map": "./static/js/main.38017094.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.b4d91e04.js",
+    "runtime-main.js.map": "./static/js/runtime-main.b4d91e04.js.map",
+    "static/css/2.b8fe46b5.chunk.css": "./static/css/2.b8fe46b5.chunk.css",
+    "static/js/2.ce7d3e38.chunk.js": "./static/js/2.ce7d3e38.chunk.js",
+    "static/js/2.ce7d3e38.chunk.js.map": "./static/js/2.ce7d3e38.chunk.js.map",
+    "static/js/3.bfd0bd11.chunk.js": "./static/js/3.bfd0bd11.chunk.js",
+    "static/js/3.bfd0bd11.chunk.js.map": "./static/js/3.bfd0bd11.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.e624c244.chunk.css.map": "./static/css/main.e624c244.chunk.css.map",
-    "static/js/2.a78ccb05.chunk.js.LICENSE.txt": "./static/js/2.a78ccb05.chunk.js.LICENSE.txt",
+    "static/css/2.b8fe46b5.chunk.css.map": "./static/css/2.b8fe46b5.chunk.css.map",
+    "static/css/main.e1036f0f.chunk.css.map": "./static/css/main.e1036f0f.chunk.css.map",
+    "static/js/2.ce7d3e38.chunk.js.LICENSE.txt": "./static/js/2.ce7d3e38.chunk.js.LICENSE.txt",
     "static/media/App.scss": "./static/media/Rubik-LightItalic.987cbfce.ttf",
     "static/media/cropped-rt-logo-2.aacbb41a.jpeg": "./static/media/cropped-rt-logo-2.aacbb41a.jpeg",
+    "static/media/fatty-corgi-1QsQRkxnU6I-unsplash.7a8ec41c.jpg": "./static/media/fatty-corgi-1QsQRkxnU6I-unsplash.7a8ec41c.jpg",
     "static/media/rt-logo-1.3d748183.jpeg": "./static/media/rt-logo-1.3d748183.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3fe7d5a5.js",
-    "static/js/2.a78ccb05.chunk.js",
-    "static/css/main.e624c244.chunk.css",
-    "static/js/main.e4fd6282.chunk.js"
+    "static/js/runtime-main.b4d91e04.js",
+    "static/css/2.b8fe46b5.chunk.css",
+    "static/js/2.ce7d3e38.chunk.js",
+    "static/css/main.e1036f0f.chunk.css",
+    "static/js/main.38017094.chunk.js"
   ]
 }
