@@ -38,4 +38,5 @@ class JsonDeserializationHelper {
         return (optionalValue != null)?(optionalValue):(null);
     }
 }
-export default new JsonDeserializationHelper();
+const defaultHelper = new JsonDeserializationHelper();
+export default defaultHelper;

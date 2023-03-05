@@ -8,7 +8,7 @@ interface IParticipantProps {
 const Participant : React.FC<IParticipantProps> = props => {
     return (
         <tr className={`participant`}>
-            <td>{props.participant.name}</td>
+            <td>{props.participant.surname}</td>
             <td>{props.participant.firstName}</td>
             <td>{props.participant.email}</td>
             <td className='center'>{props.participant.numberOfPeople}</td>

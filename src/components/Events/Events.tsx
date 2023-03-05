@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import EventModel from '../../model/EventModel';
 import Event from './Event';
-import { getEvents } from './EventsController';
+import { getEventsPublic } from './EventsController';
 import RegisterPopUp from './RegisterPopUp';
 
 const Events : React.FC = props => {
@@ -12,7 +12,7 @@ const Events : React.FC = props => {
     const [maxParticipants, setMaxParticipants] = useState<number | null>(null);
    
     useEffect(() => {
-        getEvents().then(t => setEvents(t));
+        getEventsPublic().then(t => setEvents(t));
     }, []);
 
     return (

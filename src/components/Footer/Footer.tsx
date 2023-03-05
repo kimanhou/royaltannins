@@ -12,7 +12,7 @@ const Footer : React.FC = props => {
     return (
         <footer className={`flex-column`}>
             <div className='flex-row'>
-                &copy; 2022 <div className='wine-glass' onClick={onGlassOfWineClick}>🍷</div>
+                &copy; 2023 <div className='wine-glass' onClick={onGlassOfWineClick}>🍷</div>
             </div>
         </footer>
     );

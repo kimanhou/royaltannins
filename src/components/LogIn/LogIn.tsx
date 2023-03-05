@@ -2,16 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import './LogIn.scss';
 import background from './../../images/fatty-corgi-1QsQRkxnU6I-unsplash.jpg';
 import { useNavigate } from 'react-router';
-import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-interface ILogInProps {
-
-}
-
-const LogIn : React.FC<ILogInProps> = props => {
+const LogIn : React.FC = props => {
     const [ inputType, setInputType ] = useState('password');
     const [ labelButton, setLabelButton ] = useState('show');
     const [ userInput, setUserInput ] = useState('');
@@ -41,20 +36,27 @@ const LogIn : React.FC<ILogInProps> = props => {
 
     const {
         handleSubmit,
-        formState: { errors },
     } = useForm();
 
     const login = () => {
-        let params = {
-            email: 'corgi@yahoo.com',
+        let body = {
+            username: 'corgi',
             password: userInput,
         };
-        
-        axios
-            .post("https://2epoooo4sg.execute-api.us-east-1.amazonaws.com/royalTannins-auth", params,
-            {headers : {"Content-Type" : "application/json", "Access-Control-Allow-Origin": "*"}})
-            .then((response) => {
-                sessionStorage.setItem('authToken', response.data.token);
+        const url = "https://nkyenlvln9.execute-api.us-east-1.amazonaws.com/auth";
+        const headers = {
+            "Content-Type" : "application/json", 
+            // "Access-Control-Allow-Origin": "*"
+        };
+
+        fetch(url, {
+            method: "POST", 
+            headers,
+            body: JSON.stringify(body), 
+          })
+          .then(response => response.json())
+          .then((data) => {
+                sessionStorage.setItem('authToken', data.token);
                 const path = "/event-management";
                 navigate(path);
           })

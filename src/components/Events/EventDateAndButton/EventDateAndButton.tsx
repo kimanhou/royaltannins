@@ -17,7 +17,7 @@ const EventDateAndButton : React.FC<IEventDateAndButtonProps> = props => {
         props.setEventId(props.event.id);
         props.setEventTitle(props.event.title);
         props.setRegisterPopUpVisible(true);
-        props.setMaxParticipants(props.event.availableSpots);
+        props.setMaxParticipants(props.event.remainingCapacity);
     }
 
     const isFullyBooked = props.event !== undefined && props.event !== null && props.event.isFullyBooked();

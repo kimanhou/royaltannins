@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import EventModel from '../../../model/EventModel';
-import { getEvents } from '../../Events/EventsController';
+import { getEventsPrivate } from '../../Events/EventsController';
 import './EventManagement.scss';
 import EventMangementEvent from '../EventMangementEvent/EventMangementEvent';
 
@@ -11,7 +11,7 @@ interface IEventManagementProps {
 const EventManagement : React.FC<IEventManagementProps> = props => {
     const [events, setEvents] = useState<EventModel[]>([]);
     useEffect(() => {
-        getEvents().then(t => setEvents(t));
+        getEventsPrivate().then(t => setEvents(t));
     }, []);
 
     return (

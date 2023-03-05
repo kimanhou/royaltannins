@@ -1,30 +1,51 @@
 export default class ParticipantModel {
-    readonly name : string;
-    readonly firstName : string;
-    readonly email : string;
-    readonly numberOfPeople : number;
+    readonly id: string;
+    readonly eventId: string;
+    readonly surname: string;
+    readonly firstName: string;
+    readonly email: string;
+    readonly numberOfPeople: number;
 
-    constructor(name : string, firstName : string, email : string, numberOfPeople : number) {
-        this.name = name;
+    constructor(
+        id: string,
+        eventId: string,
+        surname: string,
+        firstName: string,
+        email: string,
+        numberOfPeople: number
+    ) {
+        this.id = id;
+        this.eventId = eventId;
+        this.surname = surname;
         this.firstName = firstName;
         this.email = email;
         this.numberOfPeople = numberOfPeople;
     }
 
-    static deserializeFromDynamoDb = (json : any) => {
-        const name = json.name.S !== undefined && json.name.S !== undefined ? json.name.S : '';
-        const firstName = json.firstName !== undefined && json.firstName.S !== undefined ? json.firstName.S : '';
-        const email = json.email !== undefined && json.email.S !== undefined ? json.email.S : '';
-        const numberOfPeople = json.numberOfPeople !== undefined && json.numberOfPeople.N !== undefined ? parseInt(json.numberOfPeople.N) : -1;
+    static deserialize = (json: any) => {
+        const surname = json.surname !== undefined ? json.surname : "";
+        const firstName = json.firstname !== undefined ? json.firstname : "";
+        const email = json.email !== undefined ? json.email : "";
+        const numberOfPeople =
+            json.numberOfPeople !== undefined ? json.numberOfPeople : -1;
+        const eventId = json.eventId;
+        const id = json.id;
 
-        return new ParticipantModel(name, firstName, email, numberOfPeople);
-    }
+        return new ParticipantModel(
+            id,
+            eventId,
+            surname,
+            firstName,
+            email,
+            numberOfPeople
+        );
+    };
 
-    static deserializeArrayFromDynamoDb = (json : any) => {
-        if (json != null && json.L != null && Array.isArray(json.L)) {
-            return json.L.map((x : any) => ParticipantModel.deserializeFromDynamoDb(x.M));
+    static deserializeArray = (json: any) => {
+        if (json != null && Array.isArray(json)) {
+            return json.map((x: any) => ParticipantModel.deserialize(x));
         }
 
         return [];
-    }
+    };
 }
