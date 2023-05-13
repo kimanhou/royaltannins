@@ -13,7 +13,6 @@ interface IEventMangementEventProps {
 
 const EventMangementEvent : React.FC<IEventMangementEventProps> = props => {
     const isMobile = useIsMobile();
-    console.log('event', props.event);
 
     return (
         <div className={`event-management-event`}>

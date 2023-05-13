@@ -21,8 +21,8 @@ const EventManagement : React.FC<IEventManagementProps> = props => {
             {events.length === 0 && <>No events</>}
             {events.length > 0 && 
                 <>
-                    {events.map(t => 
-                        <EventMangementEvent event={t} />
+                    {events.map(event => 
+                        <EventMangementEvent event={event} key={event.id} />
                     )}
                 </>
             }
