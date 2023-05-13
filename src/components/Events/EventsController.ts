@@ -1,9 +1,55 @@
+import { BASE_ENDPOINT } from "../../config";
 import EventModel from "../../model/EventModel";
 
-const eventsBaseUrl =
-    "https://nkyenlvln9.execute-api.us-east-1.amazonaws.com/events";
-
+const eventsBaseUrl = `${BASE_ENDPOINT}events`;
 const eventsPublicUrl = `${eventsBaseUrl}/public`;
+
+async function sendRequestEvent({
+    eventId,
+    method,
+    body,
+}: {
+    eventId: number;
+    method: string;
+    body?: BodyInit;
+}) {
+    const authTokenNullable = sessionStorage.getItem("authToken");
+    const authToken = authTokenNullable ? authTokenNullable : "";
+    const headers = new Headers({ Authorization: authToken });
+    const url = `${eventsBaseUrl}/${eventId}`;
+
+    const response = await fetch(url, {
+        method,
+        headers: new Headers(headers),
+        body: body,
+    });
+
+    if (response.ok) {
+        const json = await response.json();
+        const event = EventModel.deserialize(json);
+        return event;
+    }
+    return null;
+}
+
+async function getEvent({ eventId }: { eventId: number }) {
+    return sendRequestEvent({ eventId, method: "GET" });
+}
+
+async function deleteEvent({ eventId }: { eventId: number }) {
+    return sendRequestEvent({ eventId, method: "DELETE" });
+}
+
+async function updateEvent({
+    eventId,
+    event,
+}: {
+    eventId: number;
+    event: EventModel;
+}) {
+    const body = JSON.stringify(event);
+    return sendRequestEvent({ eventId, method: "UPDATE", body });
+}
 
 async function getEvents({ isPublic = false }: { isPublic: boolean }) {
     const authTokenNullable = sessionStorage.getItem("authToken");
