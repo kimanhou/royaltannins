@@ -1,8 +1,5 @@
-import { BASE_ENDPOINT } from "../../config";
+import { EVENTS_ENDPOINT } from "../../config";
 import EventModel from "../../model/EventModel";
-
-const eventsBaseUrl = `${BASE_ENDPOINT}events`;
-const eventsPublicUrl = `${eventsBaseUrl}/public`;
 
 async function sendRequestEvent({
     eventId,
@@ -16,7 +13,7 @@ async function sendRequestEvent({
     const authTokenNullable = sessionStorage.getItem("authToken");
     const authToken = authTokenNullable ? authTokenNullable : "";
     const headers = new Headers({ Authorization: authToken });
-    const url = `${eventsBaseUrl}/${eventId}`;
+    const url = `${EVENTS_ENDPOINT}/${eventId}`;
 
     const response = await fetch(url, {
         method,
@@ -54,7 +51,7 @@ async function updateEvent({
 async function getEvents({ isPublic = false }: { isPublic: boolean }) {
     const authTokenNullable = sessionStorage.getItem("authToken");
     const authToken = authTokenNullable ? authTokenNullable : "";
-    const url = isPublic ? eventsPublicUrl : eventsBaseUrl;
+    const url = isPublic ? `${EVENTS_ENDPOINT}/public` : EVENTS_ENDPOINT;
     const headers = isPublic
         ? undefined
         : new Headers({ Authorization: authToken });
